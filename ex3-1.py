@@ -1,0 +1,7 @@
+print("Cost of Attendance at Codeup:", 22500)
+print("Duration in weeks:", 18)
+print("Cost of Attendance per week", 22500/18)
+print("Cost of Attendance per class day", 22500/(18*5))
+print("With women in Tech Scholarship is 5000 OR 2500:",22500-5000,"or",22500-2500)
+print("with Minorities in Tech Scholarship is 5000 OR 2500",22500-5000-5000,"or",22500-5000-2500,"or",22500-2500*2)
+print("With Pride",22500-1000,"OR",22500-1000-5000*2,"or",22500-1000-5000-2500)
