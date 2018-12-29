@@ -53,3 +53,9 @@ if not state:
 #get a city with a default value
 city = cities.get('TX', 'Does not exist')
 print(f"The city for the state of 'TX' is: {city}")
+
+favorite_things = {}
+favorite_things["number"] = 3
+favorite_things["color"] = "blue"
+favorite_things["taco"] = "Bean n Cheese"
+print(favorite_things)
