@@ -58,4 +58,7 @@ favorite_things = {}
 favorite_things["number"] = 3
 favorite_things["color"] = "blue"
 favorite_things["taco"] = "Bean n Cheese"
+favorite_things["pets"] = []
+favorite_things["pets"].append("Sora")
+favorite_things["pets"].append("Machi")
 print(favorite_things)
