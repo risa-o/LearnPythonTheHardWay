@@ -13,11 +13,11 @@ Q. Quit""")
 	reply = input("> ")
 
 	if reply == '1':
-		display_todo()
+		display_todo(list_of_todos)
 	elif reply == '2':
-		add_todo()
+		add_todo(list_of_todos)
 	elif reply == '3':
-		delete_todo()
+		delete_todo(list_of_todos)
 	elif reply == "q" or reply == 'Q':
 		response = input("Are you sure? Y / N ")
 		if response == 'y' or response == 'Y' or response == 'Yes' or response == "YES" or response == 'yes':
@@ -29,26 +29,28 @@ Q. Quit""")
 
 	return ()
 # ----------------------
-def display_todo():
+def display_todo(list_of_todos):
 	print("\n--List of ToDos--")
-	print(list_of_todos)
+	for i, todo in enumerate(list_of_todos):
+		print(i,todo)
 	menu_choice()
 	return()
 
-def add_todo():
+def add_todo(list_of_todos):
 	print("Please add your ToDo: ")
 	reply = input("> ")
 	list_of_todos.append(reply)
 	menu_choice()
 	return ()
 
-def delete_todo():
-	print("which Todo would you like to delete?")
+def delete_todo(list_of_todos):
+	print("which Todo would you like to delete?(1-...)")
+	for i, todo in enumerate(list_of_todos):
+		print(i,todo)
+	reply = int(input("> "))
+	del list_of_todos[reply]
 	menu_choice()
 	return()
 
-#	return()
-
-#def quit():
 
 menu_choice()
