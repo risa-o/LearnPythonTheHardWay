@@ -1,13 +1,15 @@
-print("Welcome to your ToDos!")
+print("\n\nWelcome to your ToDos!")
+
+list_of_todos = []
 #----------------------
 #create menu that allows user to select one of 4 choices, one of which is to quit
+
 def menu_choice():
-	print ("""1. Display All ToDos
+	print ("""
+1. Display All ToDos
 2. Add a New ToDo
 3. Delete a ToDo
-Q. Quit
-""")
-
+Q. Quit""")
 	reply = input("> ")
 
 	if reply == '1':
@@ -26,15 +28,27 @@ Q. Quit
 		menu_choice()
 
 	return ()
-#----------------------
+# ----------------------
 def display_todo():
-
+	print("\n--List of ToDos--")
+	print(list_of_todos)
+	menu_choice()
 	return()
 
 def add_todo():
+	print("Please add your ToDo: ")
+	reply = input("> ")
+	list_of_todos.append(reply)
+	menu_choice()
 	return ()
 
 def delete_todo():
+	print("which Todo would you like to delete?")
+	menu_choice()
 	return()
 
-def quit():
+#	return()
+
+#def quit():
+
+menu_choice()
