@@ -85,7 +85,7 @@ def get_shawty(list_name):
 	return min(list_name, key = len)
 
 print(get_shawty(bugs))
-
+get_shortest_string = get_shawty
 #----------------------------------------------
 
 # 8. Write a function named first_to_last that takes in a sequence and 
@@ -96,3 +96,41 @@ def reverse_list(list_name):
 	return list_name[::-1]
 
 print(reverse_list(bugs))
+
+#----------------------------------------------
+
+# 9. Write a function named get_unique_values that takes in a sequence and 
+# returns only the unique values in that sequence. Example: get_unique_values([1,
+#  2, 2, 2, 2, 3, 3]) returns [1, 2, 3]. 
+
+def get_unique_values(list_name):
+	uniques = []
+	for item in list_name:
+		if item not in uniques:
+			 uniques.append(item)
+	return uniques
+
+print (get_unique_values(bugs))
+
+#----------------------------------------------
+
+# 10. Write a function name frequencies that takes in a sequence and returns a dictionary 
+# where each occuring value is a key and the corresponding value is the frequency count of that number 
+# or character. 
+# Example: frequencies("Bobby") returns {"B": 1, "o":1, "b":2, "y": 1}. 
+# Example: frequencies(["mango", "guava", "mango", "kiwi"]) 
+# returns {'mango': 2, 'guava': 1, 'kiwi': 1}. 
+# Hint, the order of the keys does not matter since dictionaries, by definition, focus on the label for 
+# ookup rather than the index to seek inside of iteration. 
+# That means that frequencies(["mango", "guava", "mango", "kiwi"]) may just as well return 
+# {'kiwi': 1, 'mango': 2, 'guava': 1} as well as {'guava': 1, 'kiwi': 1, 'mango': 2}.  
+
+def frequencies(data):
+	freq = {}
+	for item in data:
+		if item not in freq:
+			freq[item] = 0
+		freq[item] += 1	
+	return freq
+
+print(frequencies(bugs))
