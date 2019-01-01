@@ -52,5 +52,4 @@ def delete_todo(list_of_todos):
 	menu_choice()
 	return()
 
-
 menu_choice()
